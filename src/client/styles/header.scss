@@ -1,0 +1,17 @@
+header {
+  text-align: center;
+  font-size: 2em;
+}
+
+#container {
+  display: grid;
+  max-width: 90vw;
+  margin: 0 auto;
+  grid-template-columns: 35vh 35vh;
+  grid-template-rows: 45vw 45vw;
+  grid-gap: 25px;
+  background-color: green;
+
+  grid-template-areas: "top top
+bottomleft bottomright";
+}

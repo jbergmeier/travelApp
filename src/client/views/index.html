@@ -6,6 +6,68 @@
     <title>Document</title>
   </head>
   <body>
-    hello from fgi
+    <div id="container">
+      <header>Your Travel App</header>
+      <main>
+        <section id="content">
+          <section id="image">
+            <img
+              src="https://pixabay.com/get/54e6d4454f5ba514f6da8c7dda793679153adbed5b586c48702679d69448c55db0_1280.jpg"
+            />
+          </section>
+          <section id="add_info"></section>
+        </section>
+        <section id="sidebar">
+          <section id="weatherData">Weather</section>
+        </section>
+      </main>
+      <footer>
+        <section id="input">
+          <form class="form" onsubmit="return Client.handleSubmit(event)">
+            <input
+              id="place"
+              type="text"
+              name="input"
+              value=""
+              placeholder="place"
+            />
+            <input
+              id="country"
+              type="text"
+              name="input"
+              value=""
+              placeholder="country"
+            /><input
+              id="date"
+              type="text"
+              name="input"
+              value=""
+              placeholder="2020-06-09"
+            /><br />
+            <input
+              type="submit"
+              name=""
+              id="submitButton"
+              value="submit"
+              onclick="return Client.handleSubmit(event)"
+              onsubmit="return Client.handleSubmit(event)"
+            />
+          </form>
+
+          <section>
+            <div id="legal">&copy; Joern Bergmeier - 2020</div>
+          </section>
+        </section>
+      </footer>
+    </div>
+    <!-- <script>
+      // Check that service workers are supported
+      if ('serviceWorker' in navigator) {
+          // Use the window load event to keep the page load performant
+          window.addEventListener('load', () => {
+              navigator.serviceWorker.register('/service-worker.js');
+          });
+      }
+  </script> -->
   </body>
 </html>

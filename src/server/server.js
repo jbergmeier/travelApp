@@ -12,6 +12,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(express.static("dist"));
 
 //Date Calc
 let now = new Date();
@@ -38,7 +39,7 @@ const dateCalc = (date) => {
 
 //Routes
 app.get("/", (req, res) => {
-  res.send("Working");
+  res.sendFile("dist/index.html");
 });
 
 app.post("/weatherData", async (req, res) => {
