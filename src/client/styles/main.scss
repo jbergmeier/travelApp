@@ -48,3 +48,32 @@
   padding: 20px 0;
   border: 1px solid black;
 }
+
+@media (max-width: 860px) {
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "right"
+      "main"
+      "footer";
+    grid-gap: 10px;
+    padding: 10px;
+  }
+  .menu {
+    display: none;
+  }
+  .footer {
+    form {
+      input {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+//menu weg
+// bild oben
+//temperature darunter
+// footer input unten
