@@ -32,6 +32,7 @@ const getForecastWeather = async (city, countryCode, days, callback) => {
           temperature: json.data[days].max_temp,
           date: json.data[days].valid_date,
           place: json.city_name,
+          countryCode: json.country_code,
           timezone: json.timezone,
           image: testPic,
         });

@@ -52,8 +52,8 @@ app.post("/weatherData", async (req, res) => {
       city,
       countryCode,
       dateCalc(dateOfTravel),
-      ({ temperature, date, place, timezone, image } = {}) => {
-        res.json({ temperature, date, place, timezone, image });
+      ({ temperature, date, place, timezone, image, countryCode } = {}) => {
+        res.json({ temperature, date, place, timezone, image, countryCode });
       }
     );
   } catch (e) {

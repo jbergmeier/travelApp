@@ -1,17 +1,16 @@
 header {
   text-align: center;
   font-size: 2em;
+  grid-area: header;
 }
 
 #container {
   display: grid;
-  max-width: 90vw;
-  margin: 0 auto;
-  grid-template-columns: 35vh 35vh;
-  grid-template-rows: 45vw 45vw;
-  grid-gap: 25px;
-  background-color: green;
-
-  grid-template-areas: "top top
-bottomleft bottomright";
+  grid-template-areas:
+    "hd hd hd hd hd hd hd hd"
+    "pic pic pic pic pic sb sb"
+    "main main main main main main main main"
+    "ft ft ft ft ft ft ft ft ";
+  grid-gap: 10px;
+  background-color: red;
 }

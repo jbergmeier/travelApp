@@ -3,71 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Travel App</title>
   </head>
   <body>
-    <div id="container">
-      <header>Your Travel App</header>
-      <main>
-        <section id="content">
-          <section id="image">
-            <img
-              src="https://pixabay.com/get/54e6d4454f5ba514f6da8c7dda793679153adbed5b586c48702679d69448c55db0_1280.jpg"
-            />
-          </section>
-          <section id="add_info"></section>
-        </section>
-        <section id="sidebar">
-          <section id="weatherData">Weather</section>
-        </section>
-      </main>
-      <footer>
-        <section id="input">
-          <form class="form" onsubmit="return Client.handleSubmit(event)">
-            <input
-              id="place"
-              type="text"
-              name="input"
-              value=""
-              placeholder="place"
-            />
-            <input
-              id="country"
-              type="text"
-              name="input"
-              value=""
-              placeholder="country"
-            /><input
-              id="date"
-              type="text"
-              name="input"
-              value=""
-              placeholder="2020-06-09"
-            /><br />
-            <input
-              type="submit"
-              name=""
-              id="submitButton"
-              value="submit"
-              onclick="return Client.handleSubmit(event)"
-              onsubmit="return Client.handleSubmit(event)"
-            />
-          </form>
-
-          <section>
-            <div id="legal">&copy; Joern Bergmeier - 2020</div>
-          </section>
-        </section>
-      </footer>
+    <div class="grid-container">
+      <div class="header"><h1>Travel App</h1></div>
+      <div class="menu">Menu</div>
+      <div class="main">
+        <div id="main_placeName"></div>
+        <img id="main_image"
+          src="https://www.fujifilm.co.nz/products/digital_cameras/x/fujifilm_x_t1/sample_images/img/index/ff_x_t1_001.JPG"
+          alt="Here is your pic"
+        />
+      </div>
+      <div class="right">
+        <h4>Weather Details</h4>
+        <table id="weather_table">
+    <tr>
+      <td>Temperature: </td><td id="temperature">n/a</td>
+    </tr>
+    <tr>
+      <td>Timezone: </td><td id="timezone">n/a</td>
+    </tr>
+    <tr>
+      <td>Travel Date: </td><td id="date">n/a</td>
+    </tr>
+        </table>
+      </div>
+      <div class="footer">
+        <form class="form">
+          <label for="input_place">Travel Place</label>
+          <input
+            id="input_place"
+            type="text"
+            name="input"
+            value=""
+            placeholder="e.g Naples, Paris, London"
+          />
+          <label for="input_country">Country Code</label>
+          <input
+            id="input_countryCode"
+            type="text"
+            name="input"
+            value=""
+            placeholder="e.g. us, de, ru, es, gb"
+          />
+          <label for="input_date">Travel Date</label>
+          <input
+            id="input_date"
+            type="text"
+            name="input"
+            value=""
+            placeholder="2020-06-09"
+          /><br /><div id="info">If empty, date will be today and City London, GB</div>
+          <input
+            type="submit"
+            name=""
+            id="submitButton"
+            value="get Travel Details"
+          />
+        </form>
+        </form>
+      </div>
     </div>
-    <!-- <script>
-      // Check that service workers are supported
-      if ('serviceWorker' in navigator) {
-          // Use the window load event to keep the page load performant
-          window.addEventListener('load', () => {
-              navigator.serviceWorker.register('/service-worker.js');
-          });
-      }
-  </script> -->
   </body>
 </html>

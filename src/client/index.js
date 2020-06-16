@@ -1,4 +1,11 @@
-// javascript import missing right now
+//CSS
 import "./styles/main.scss";
-import "./styles/header.scss";
-import "./styles/footer.scss";
+
+document
+  .getElementById("submitButton")
+  .addEventListener("click", getWeatherData);
+// JS
+import { getWeatherData } from "./js/getWeatherData";
+
+// EPXPORT
+export { getWeatherData };
