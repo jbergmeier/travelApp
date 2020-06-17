@@ -1,14 +1,16 @@
 import getTravelImage from "../../server/js/getPicture";
 
+const getCurrentDate = () => {
+  let d = new Date();
+  var n = d.toISOString().substring(0, 10);
+  return n;
+};
+
 const getWeatherData = () => {
   event.preventDefault();
   const url = "/weatherData";
   // get / set Date
-  const getCurrentDate = () => {
-    let d = new Date();
-    var n = d.toISOString().substring(0, 10);
-    return n;
-  };
+
   const dateNow = getCurrentDate();
 
   // get Data from view
@@ -40,7 +42,6 @@ const getWeatherData = () => {
   };
 
   // get Elements from View
-  const weather_table = document.getElementById("weather_table");
   console.log("fetching weather data");
   fetch(url, {
     method: "POST",
@@ -69,4 +70,4 @@ const getWeatherData = () => {
     });
 };
 
-export { getWeatherData };
+export { getWeatherData, getCurrentDate };
