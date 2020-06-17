@@ -8,7 +8,7 @@ const getCurrentDate = () => {
 
 const getWeatherData = () => {
   event.preventDefault();
-  const url = 'http://localhost:8099/weatherData';
+  const url = '/weatherData';
   // get / set Date
   const dateNow = getCurrentDate();
 

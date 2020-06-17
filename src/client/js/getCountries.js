@@ -1,7 +1,7 @@
 import bodyParser, { json } from 'body-parser';
 
 const getCountries = () => {
-  const url = 'http://localhost:8099/allCountries';
+  const url = '/allCountries';
   let dropdown = document.getElementById('countryList');
   dropdown.length = 0;
 
