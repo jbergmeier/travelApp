@@ -11,7 +11,7 @@
   grid-area: main;
 
   img {
-    max-width: 400px;
+    max-width: 90vw;
   }
 }
 
@@ -80,11 +80,10 @@
       "footer";
     grid-gap: 10px;
     padding: 10px;
+    margin: 0 auto;
+    width: 90vw;
   }
 
-  .menu {
-    display: none;
-  }
 
   .footer {
     form {
