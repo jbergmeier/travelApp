@@ -1,28 +1,42 @@
 .header {
   grid-area: header;
 }
+
 .menu {
   grid-area: menu;
+  display: none
 }
+
 .main {
   grid-area: main;
+
   img {
     max-width: 400px;
   }
 }
+
 .right {
   grid-area: right;
+
   table {
     margin-left: 25px;
     margin-right: 25px;
   }
 }
+
 .footer {
   grid-area: footer;
+
   form {
     label {
       font-size: 1em;
     }
+
+    div {
+      margin-bottom: 15px;
+
+    }
+
     #submitButton {
       margin-top: 15px;
 
@@ -41,13 +55,15 @@
   display: grid;
   grid-template-areas:
     "header header header header header header"
-    "menu main main main right right"
-    "menu footer footer footer footer footer";
+    "main main main main right right" // removed menu
+    "footer footer footer footer footer footer"; //removed menu
   grid-gap: 10px;
   padding: 10px;
+  max-width: 1000px;
+  margin: 0 auto
 }
 
-.grid-container > div {
+.grid-container>div {
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   padding: 20px 0;
@@ -65,20 +81,20 @@
     grid-gap: 10px;
     padding: 10px;
   }
+
   .menu {
     display: none;
   }
+
   .footer {
     form {
-      input {
-        display: block;
-        margin: 0 auto;
+      div {
+
+        label {
+          display: block
+        }
       }
+
     }
   }
 }
-
-//menu weg
-// bild oben
-//temperature darunter
-// footer input unten

@@ -1,18 +1,18 @@
-const fetch = require("node-fetch");
-const cityInfo = require("./cityInfo");
-const getTravelImage = require("./getPicture");
-require("dotenv").config();
+const fetch = require('node-fetch');
+const cityInfo = require('./cityInfo');
+const getTravelImage = require('./getPicture');
+require('dotenv').config();
 
 const api_key = process.env.API_KEY_WEATHER;
 
 let long = -78.638;
 let lat = 35.775;
-let testPic = "";
+let testPic = '';
 
 const getForecastWeather = async (city, countryCode, days, callback) => {
   //URL
   console.log(city, days, countryCode);
-  const url = "https://api.weatherbit.io/v2.0/forecast/daily?&key=" + api_key;
+  const url = 'https://api.weatherbit.io/v2.0/forecast/daily?&key=' + api_key;
   try {
     // Call city API to get Coordinates
     await cityInfo(city, countryCode, ({ latitude, longitude } = {}) => {
@@ -25,10 +25,11 @@ const getForecastWeather = async (city, countryCode, days, callback) => {
     });
 
     //Call Weather API to get weather data with before requested coordniates
-    await fetch(url + "&lat=" + lat + "&lon=" + long)
+    await fetch(url + '&lat=' + lat + '&lon=' + long)
       .then((res) => res.json())
       .then((json) => {
         // let resultData = json.data;
+        console.log(json);
         callback({
           temperature: json.data[days].max_temp,
           date: json.data[days].valid_date,
