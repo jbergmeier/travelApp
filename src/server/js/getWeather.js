@@ -1,8 +1,9 @@
 const fetch = require("node-fetch");
 const cityInfo = require("./cityInfo");
 const getTravelImage = require("./getPicture");
+require("dotenv").config();
 
-const api_key = "b5ee64e9bcea48dfa38ad2ec5e178e29";
+const api_key = process.env.API_KEY_WEATHER;
 
 let long = -78.638;
 let lat = 35.775;

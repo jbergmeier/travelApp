@@ -5,3 +5,7 @@ Here you can lookup your travel destination and get some Timezone and Weather in
 ## Tech
 
 Backend is implemented here as well, which calls different external APIS to get the needed information
+
+## Additional
+
+Implemented the calculation of the trip duration/length

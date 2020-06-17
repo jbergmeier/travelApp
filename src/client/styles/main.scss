@@ -25,7 +25,12 @@
     }
     #submitButton {
       margin-top: 15px;
+
+      &:hover {
+        background-color: #4caf50;
+      }
     }
+
     #info {
       font-size: 0.7em;
     }

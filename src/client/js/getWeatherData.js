@@ -1,4 +1,4 @@
-import getTravelImage from "../../server/js/getPicture";
+import { calcDuration } from "./calcDuration";
 
 const getCurrentDate = () => {
   let d = new Date();
@@ -10,7 +10,6 @@ const getWeatherData = () => {
   event.preventDefault();
   const url = "/weatherData";
   // get / set Date
-
   const dateNow = getCurrentDate();
 
   // get Data from view
@@ -35,6 +34,15 @@ const getWeatherData = () => {
     console.log("No Country defined, setting it to GB");
   }
 
+  //calc travelDuration
+  let get_travelEndDate = document.getElementById("input_date_end").value;
+  console.log("Duration: " + calcDuration(get_travelDate, get_travelEndDate));
+  document.getElementById("travel_duration").innerText = calcDuration(
+    get_travelDate,
+    get_travelEndDate
+  );
+
+  // Build request Body for fetch call
   let request = {
     travelDate: get_travelDate,
     city: get_travelPlace,

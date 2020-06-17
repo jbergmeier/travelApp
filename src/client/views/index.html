@@ -28,6 +28,9 @@
     <tr>
       <td>Travel Date: </td><td id="date">n/a</td>
     </tr>
+    <tr>
+      <td>Travel Duration: </td><td id="travel_duration">n/a</td>
+    </tr>
         </table>
       </div>
       <div class="footer">
@@ -48,14 +51,13 @@
             value=""
             placeholder="e.g. us, de, ru, es, gb"
           />
-          <label for="input_date">Travel Date</label>
-          <input
-            id="input_date"
-            type="text"
-            name="input"
-            value=""
-            placeholder="2020-06-09"
-          /><br /><div id="info">If empty, date will be today and City London, GB</div>
+          <label for="input_date">Travel Start Date</label>
+          <input type="date" id="input_date" name="trip-start"
+            value="2020-01-22" min="2020-01-01" />
+          <label for="input_date">Travel End Date</label>
+          <input type="date" id="input_date_end" name="trip-end"
+            value="2020-01-22" min="2020-01-01" />
+          <br /><div id="info">If empty, date will be today and City London, GB</div>
           <input
             type="submit"
             name=""
